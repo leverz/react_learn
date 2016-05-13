@@ -1,0 +1,275 @@
+/* STYLE SHEET INIT*/
+body{background:#fff;font-family:"Microsoft Yahei";overflow-x: hidden;overflow-y: auto;}
+html a{outline:none;}
+html {padding:0;margin:0;font-size:12px;color:#333}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,img{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ol,ul{list-style:none}
+sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}
+input,textarea,select{font-size:100%;outline:none}
+a,a:link{text-decoration:none;cursor:pointer}
+a:hover{text-decoration:none}
+a:focus {outline:none;-moz-outline:none;}
+
+.clearfix:after{ content:".";display:block;height:0;clear:both;visibility:hidden}
+*+html .clearfix{ min-height:1%}
+
+input{outline:none}
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  -webkit-appearance: none;outline:none
+}
+img{
+  vertical-align: middle;
+}
+/* common */
+$HOVER_COLOR : #e82638;
+$RESIZE_HEIGHT : 680px;
+$FOOT_FONT_COLOR : #817c7d;
+.container{
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    width: 750px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1200px) {
+    width: 970px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 85px;
+    margin-left: 85px;
+    //width: 1170px;
+  }
+}
+.pull-right{
+  float: right;
+}
+.pull-left{
+  float: left;
+}
+h1{
+  font-size: 48px;
+  margin: 10px 0;
+}
+ul.nav{
+  list-style-type: none;
+  float: left;
+  margin-top: 5px;
+  li{
+    list-style: none;
+    float: left;
+    color: #fff;
+    margin-left: 35px;
+    a{
+      color: #fff;
+      text-decoration: none;
+      &:hover{
+        color: $HOVER_COLOR;
+      }
+      &.active{
+        color: $HOVER_COLOR;
+      }
+    }
+  }
+}
+.mt5{
+  margin-top: 5px;
+}
+.mb50{
+  margin-bottom: 50px;
+}
+.mt-md-10{
+  margin-top: 10px;
+  @media screen and (max-width: 768px){
+    margin-top: 0;
+  }
+}
+
+#content{
+  width: 100%;
+  position: relative;
+  .top-frame{
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .top-float{
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    z-index: 1;
+  }
+  header{
+    overflow: hidden;
+    padding-top: 20px;
+    .login{
+      width: 25px;
+      margin-left: 30px;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .logo{
+    width: 170px;
+    @media screen and (max-width: 992px){
+      width: 17%;
+    }
+    @media screen and (max-width: 992px){
+      width: 110px;
+    }
+    img{
+      width: 100%;
+    }
+  }
+  .nav{
+    font-size: 16px;
+  }
+  .btn-lg{
+    font-size: 16px;
+    padding: 10px 40px;
+    display: inline-block;
+    border-radius: 4px;
+    text-align: center;
+  }
+  .banner{
+    width: 100%;
+    height: $RESIZE_HEIGHT;
+    position: relative;
+    z-index: -1;
+    .shadow{
+      height: $RESIZE_HEIGHT;
+      background-color: #321809;
+    }
+    .banner-img{
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center bottom;
+      animation: 30s animation_back infinite;
+    }
+    .red-ribbon{
+      width: 100%;
+      position: absolute;
+      bottom: -7%;
+      img{
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 768px){
+      height: 500px;
+      .shadow{
+        height: 500px;
+      }
+    }
+  }
+  .content-text{
+    text-align: center;
+    width: 740px;
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -370px;
+    margin-top: -75px;
+    color: #fff;
+    font-weight: lighter;
+    h1{
+      margin-bottom: 40px;
+    }
+    .btn-lg{
+      background-color: $HOVER_COLOR;
+      a{
+        color: #fff;
+      }
+    }
+  }
+  .banner-index{
+    background-image: url("http://static.sofund.com/matrix/images/banner_index.jpg");
+  }
+  .shadow{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter: alpha(opacity=50);-moz-opacity: 0.5;opacity: 0.5;
+  }
+  .bottom-frame{
+    background-color: #3b3536;
+    footer{
+      overflow: hidden;
+      padding-top: 25px;
+      padding-bottom: 30px;
+    }
+  }
+  .contact-info{
+    p{
+      font-size: 12px;
+      color: $FOOT_FONT_COLOR;
+      padding-bottom: 8px;
+    }
+    .big-title{
+      font-size: 24px;
+      font-weight: bold;
+    }
+    ul{
+      list-style-type: none;
+      float: left;
+      li{
+        list-style: none;
+        float: left;
+        a{
+          color: $FOOT_FONT_COLOR;
+        }
+        &:after{
+          content: '|';
+          padding-left: 10px;
+          padding-right: 10px;
+          color: $FOOT_FONT_COLOR;
+        }
+        &:last-child:after{
+          content: '';
+        }
+      }
+    }
+    span{
+      font-size: 12px;
+      color: $FOOT_FONT_COLOR;
+    }
+  }
+  .wechat-code{
+    img{
+      width: 100%;
+    }
+    p{
+      text-align: center;
+      color: $FOOT_FONT_COLOR;
+      margin-top: 10px;
+    }
+  }
+}
+
+@keyframes animation_back {
+  0% {
+    background-position: 50% 100%;
+    width: 100%;
+  }
+  50% {
+    background-position: 0% 100%;
+    width: 125%;
+  }
+  100% {
+    background-position: 50% 100%;
+    width: 100%;
+  }
+}
